@@ -7,3 +7,18 @@ body {
   font-family: Arial, sans-serif;
   background: #f8fafc;
 }
+
+.featured-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+.featured-section h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.featured-section p {
+  color: #555;
+}
