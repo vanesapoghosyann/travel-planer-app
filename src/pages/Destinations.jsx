@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import DestinationCard from "../components/DestinationCard";
 import SearchBar from "../components/SearchBar";
@@ -10,6 +10,29 @@ import "./Destinations.css";
 function Destinations() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+
+  const [favorites, setFavorites] = useState(() => {
+    const savedFavorites = localStorage.getItem("travelPlannerFavorites");
+
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(
+      "travelPlannerFavorites",
+      JSON.stringify(favorites)
+    );
+  }, [favorites]);
+
+  const toggleFavorite = (destinationId) => {
+    setFavorites((currentFavorites) => {
+      if (currentFavorites.includes(destinationId)) {
+        return currentFavorites.filter((id) => id !== destinationId);
+      }
+
+      return [...currentFavorites, destinationId];
+    });
+  };
 
   const filteredDestinations = destinations.filter((destination) => {
     const matchesSearch =
@@ -50,6 +73,8 @@ function Destinations() {
             <DestinationCard
               key={destination.id}
               destination={destination}
+              isFavorite={favorites.includes(destination.id)}
+              onToggleFavorite={toggleFavorite}
             />
           ))
         ) : (

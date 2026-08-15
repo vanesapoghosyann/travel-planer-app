@@ -88,3 +88,31 @@
     height: 200px;
   }
 }
+
+.destination-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.destination-title h2 {
+  margin: 0;
+}
+
+.favorite-button {
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s ease;
+}
+
+.favorite-button:hover {
+  transform: scale(1.15);
+}
+
+.favorite-active {
+  color: #ef4444;
+}

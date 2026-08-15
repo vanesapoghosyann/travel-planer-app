@@ -1,0 +1,47 @@
+.favorites-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.favorites-header {
+  margin-bottom: 40px;
+}
+
+.favorites-header h1 {
+  margin-bottom: 12px;
+}
+
+.favorites-header p {
+  color: #64748b;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.empty-favorites {
+  padding: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  color: #64748b;
+}
+
+@media (max-width: 900px) {
+  .favorites-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .favorites-page {
+    padding: 40px 20px;
+  }
+
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,4 @@
-function DestinationCard({ destination }) {
+function DestinationCard({ destination, isFavorite, onToggleFavorite }) {
   return (
     <article className="destination-card">
       <img
@@ -8,7 +8,23 @@ function DestinationCard({ destination }) {
       />
 
       <div className="destination-content">
-        <h2>{destination.name}</h2>
+        <div className="destination-title">
+          <h2>{destination.name}</h2>
+
+          <button
+            className={`favorite-button ${
+              isFavorite ? "favorite-active" : ""
+            }`}
+            onClick={() => onToggleFavorite(destination.id)}
+            aria-label={
+              isFavorite
+                ? `Remove ${destination.name} from favorites`
+                : `Add ${destination.name} to favorites`
+            }
+          >
+            {isFavorite ? "❤️" : "♡"}
+          </button>
+        </div>
 
         <p>{destination.country}</p>
 
