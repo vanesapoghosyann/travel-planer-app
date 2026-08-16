@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Destinations from "./pages/Destinations";
 import Planner from "./pages/Planner";
 import Favorites from "./pages/Favorites";
+import TripDetails from "./pages/TripDetails";
+
 
 
 
@@ -31,6 +33,10 @@ function App() {
         <Route
           path="/favorites"
           element={<Favorites />}
+        />
+        <Route
+          path="/planner/:tripId"
+          element={<TripDetails />}
         />
 
       </Routes>

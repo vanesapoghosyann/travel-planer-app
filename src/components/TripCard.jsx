@@ -1,8 +1,14 @@
+import { Link } from "react-router-dom";
+
 function TripCard({ trip, onDelete }) {
   return (
     <article className="trip-card">
       <div>
-        <h3>{trip.name}</h3>
+        <h3>
+          <Link to={`/planner/${trip.id}`}>
+            {trip.name}
+          </Link>
+        </h3>
 
         <p>📍 {trip.destination}</p>
 
