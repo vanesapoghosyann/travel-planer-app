@@ -155,3 +155,158 @@
     width: 100%;
   }
 }
+
+.itinerary-section {
+  padding: 30px;
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.itinerary-header {
+  margin-bottom: 25px;
+}
+
+.itinerary-header h2 {
+  margin-bottom: 8px;
+}
+
+.itinerary-header p {
+  color: #64748b;
+}
+
+.activity-form {
+  display: grid;
+  gap: 16px;
+
+  padding: 25px;
+  margin-bottom: 30px;
+
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.activity-form label {
+  display: grid;
+  gap: 7px;
+}
+
+.activity-form input,
+.activity-form textarea {
+  padding: 11px 13px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font: inherit;
+}
+
+.activity-form input:focus,
+.activity-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.activity-form button {
+  width: fit-content;
+
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
+}
+
+.itinerary-list {
+  display: grid;
+  gap: 15px;
+}
+
+.activity-card {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 20px;
+  align-items: center;
+
+  padding: 20px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.activity-time {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.activity-content h4 {
+  margin: 0 0 8px;
+}
+
+.activity-content p {
+  margin: 5px 0;
+  color: #64748b;
+}
+
+.delete-activity-button {
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  cursor: pointer;
+}
+
+.empty-itinerary {
+  padding: 25px;
+
+  text-align: center;
+  color: #64748b;
+
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .itinerary-section {
+    padding: 20px;
+  }
+
+  .activity-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .activity-time {
+    font-size: 1.1rem;
+  }
+
+  .delete-activity-button {
+    width: fit-content;
+  }
+}
+
+
+.itinerary-day {
+  margin-bottom: 30px;
+}
+
+.itinerary-day h3 {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.day-activities {
+  display: grid;
+  gap: 12px;
+}
