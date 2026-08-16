@@ -1,0 +1,180 @@
+.planner-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.planner-header {
+  margin-bottom: 40px;
+}
+
+.planner-header h1 {
+  margin-bottom: 10px;
+}
+
+.planner-header p {
+  color: #64748b;
+}
+
+.trip-form-section {
+  padding: 30px;
+  margin-bottom: 60px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.trip-form {
+  display: grid;
+  gap: 20px;
+}
+
+.trip-form input,
+.trip-form select {
+  width: 100%;
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-size: 1rem;
+}
+
+.trip-form label {
+  display: grid;
+  gap: 8px;
+  color: #374151;
+}
+
+.trip-form button {
+  width: fit-content;
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.trip-form button:hover {
+  background: #1d4ed8;
+}
+
+.planned-trips h2 {
+  margin-bottom: 25px;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 200px;
+  padding: 25px;
+
+  background: white;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.trip-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.trip-card p {
+  color: #64748b;
+}
+
+.delete-trip-button {
+  align-self: flex-start;
+
+  margin-top: 20px;
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  cursor: pointer;
+}
+
+.delete-trip-button:hover {
+  background: #fecaca;
+}
+
+.empty-trips {
+  padding: 40px;
+
+  text-align: center;
+
+  background: white;
+  border-radius: 12px;
+
+  color: #64748b;
+}
+
+
+@media (max-width: 900px) {
+  .trips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .planner-page {
+    padding: 40px 20px;
+  }
+
+  .trip-form-section {
+    padding: 20px;
+  }
+
+  .trips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-form button {
+    width: 100%;
+  }
+}
+
+.trip-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  resize: vertical;
+}
+
+.trip-form input:focus,
+.trip-form select:focus,
+.trip-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+
+.trip-notes {
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+  line-height: 1.5;
+}
