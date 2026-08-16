@@ -120,7 +120,8 @@
 }
 
 @media (max-width: 900px) {
-  .trip-summary {
+  .trip-summary,
+  .trip-statistics {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -135,7 +136,8 @@
     padding: 40px 20px;
   }
 
-  .trip-summary {
+  .trip-summary,
+  .trip-statistics {
     grid-template-columns: 1fr;
   }
 
@@ -309,4 +311,35 @@
 .day-activities {
   display: grid;
   gap: 12px;
+}
+
+
+.trip-statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  padding: 22px;
+
+  background: #eff6ff;
+
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+}
+
+.stat-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.stat-card strong {
+  font-size: 1.25rem;
+  color: #1e3a8a;
 }

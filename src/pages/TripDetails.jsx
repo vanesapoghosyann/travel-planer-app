@@ -90,6 +90,18 @@ function TripDetails() {
         setIsEditing(false);
     };
 
+
+    const calculateDuration = (startDate, endDate) => {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+
+        const difference = end - start;
+
+        return Math.ceil(
+            difference / (1000 * 60 * 60 * 24)
+        ) + 1;
+    };
+
     if (!trip) {
         return (
             <main className="trip-details-page">
@@ -99,7 +111,21 @@ function TripDetails() {
         );
     }
 
-const handleAddActivity = (activity) => {
+
+    const duration = calculateDuration(
+        trip.startDate,
+        trip.endDate
+    );
+
+    const budgetPerTraveler =
+        trip.travelers > 0
+            ? trip.budget / trip.travelers
+            : 0;
+
+    const activityCount = itinerary.length;
+
+
+    const handleAddActivity = (activity) => {
         const updatedItinerary = [
             ...itinerary,
             activity,
@@ -224,6 +250,33 @@ const handleAddActivity = (activity) => {
                         <div>
                             <span>Trip type</span>
                             <strong>🏷️ {trip.tripType}</strong>
+                        </div>
+                    </section>
+
+
+                    <section className="trip-statistics">
+                        <div className="stat-card">
+                            <span>Trip duration</span>
+                            <strong>{duration} days</strong>
+                        </div>
+
+                        <div className="stat-card">
+                            <span>Travelers</span>
+                            <strong>{trip.travelers}</strong>
+                        </div>
+
+                        <div className="stat-card">
+                            <span>Budget per traveler</span>
+                            <strong>
+                                {trip.budget > 0
+                                    ? `${budgetPerTraveler.toFixed(2)} ${trip.currency}`
+                                    : "Not specified"}
+                            </strong>
+                        </div>
+
+                        <div className="stat-card">
+                            <span>Planned activities</span>
+                            <strong>{activityCount}</strong>
                         </div>
                     </section>
 
@@ -418,7 +471,7 @@ const handleAddActivity = (activity) => {
         </main>
     );
 
-    
+
 }
 
 export default TripDetails;
