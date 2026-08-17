@@ -1,0 +1,151 @@
+.weather-section {
+  margin-bottom: 30px;
+  padding: 30px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 25px;
+}
+
+.weather-header h2 {
+  margin: 0 0 8px;
+}
+
+.weather-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.weather-location {
+  padding: 8px 12px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+
+.current-weather {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 25px;
+
+  margin-bottom: 25px;
+
+  background: #f8fafc;
+
+  border-radius: 10px;
+}
+
+.current-temperature {
+  font-size: 3rem;
+  font-weight: 700;
+
+  color: #2563eb;
+}
+
+.current-weather-info p {
+  margin: 5px 0;
+
+  color: #475569;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+.forecast-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 18px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.forecast-card strong {
+  color: #334155;
+}
+
+.forecast-card span {
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  color: #2563eb;
+}
+
+.forecast-card .forecast-min {
+  font-size: 1rem;
+  font-weight: 400;
+
+  color: #64748b;
+}
+
+.forecast-card small {
+  color: #94a3b8;
+}
+
+.weather-loading {
+  padding: 20px;
+
+  color: #64748b;
+  text-align: center;
+}
+
+.weather-error {
+  padding: 20px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .weather-section {
+    padding: 20px;
+  }
+
+  .weather-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .current-weather {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+}
