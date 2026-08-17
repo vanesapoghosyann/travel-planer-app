@@ -83,3 +83,11 @@
     height: 300px;
   }
 }
+
+.map-marker-info {
+  margin: 15px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}

@@ -283,7 +283,10 @@ function TripDetails() {
                     </section>
 
                     <Weather destination={trip.destination} />
-                    <Map destination={trip.destination} />
+                    <Map
+                        destination={trip.destination}
+                        activities={itinerary}
+                    />
                     {trip.notes && (
                         <section className="trip-notes-section">
                             <h2>Notes</h2>
