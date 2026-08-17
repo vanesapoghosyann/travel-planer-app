@@ -5,6 +5,7 @@ import ActivityCard from "../components/ActivityCard";
 
 import destinations from "../data/destinations";
 import Weather from "../components/Weather";
+import Map from "../components/Map";
 
 import "./TripDetails.css";
 
@@ -282,6 +283,7 @@ function TripDetails() {
                     </section>
 
                     <Weather destination={trip.destination} />
+                    <Map destination={trip.destination} />
                     {trip.notes && (
                         <section className="trip-notes-section">
                             <h2>Notes</h2>
