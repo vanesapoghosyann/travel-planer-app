@@ -1,14 +1,30 @@
-import { useEffect, useState } from "react";
+import L from "leaflet";
 
 import {
-  MapContainer,
-  Marker,
-  Popup,
-  TileLayer,
+    MapContainer,
+    Marker,
+    Popup,
+    TileLayer,
 } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
 import "./Map.css";
+
+import { useEffect, useState } from "react";
+
+
+
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: markerIcon2x,
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
+});
 
 function Map({ destination, activities = [] }) {
   const [coordinates, setCoordinates] = useState(null);
