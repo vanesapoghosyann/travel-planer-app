@@ -6,7 +6,7 @@ A responsive React web application for discovering destinations, planning trips,
 
 **Live application:** Coming soon
 
-**GitHub repository:** [(https://github.com/vanesapoghosyann/react-task-manager)]
+**GitHub repository:** [(https://github.com/vanesapoghosyann/travel-planer-app)]
 
 ---
 
@@ -45,8 +45,8 @@ A responsive React web application for discovering destinations, planning trips,
 Clone the repository:
 
 ```bash
-git clone https://github.com/vanesapoghosyann/react-task-manager.git
-cd react-task-manager
+git clone https://github.com/vanesapoghosyann/travel-planer-app.git
+cd travel-planer-app
 npm install
 npm run dev
 ```
