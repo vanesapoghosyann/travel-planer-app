@@ -116,3 +116,28 @@
 .favorite-active {
   color: #ef4444;
 }
+
+@media (max-width: 768px) {
+  .destinations-page {
+    padding: 30px 20px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .destinations-header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .destinations-page {
+    padding: 25px 16px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -343,3 +343,37 @@
   font-size: 1.25rem;
   color: #1e3a8a;
 }
+
+
+@media (max-width: 768px) {
+  .trip-details-page {
+    padding: 30px 20px;
+  }
+
+  .trip-statistics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .trip-details-content {
+    grid-template-columns: 1fr;
+  }
+
+  .itinerary-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trip-details-page {
+    padding: 24px 16px;
+  }
+
+  .trip-statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-details-header {
+    text-align: center;
+  }
+}

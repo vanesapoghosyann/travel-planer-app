@@ -9,3 +9,24 @@
   color: #b91c1c;
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  .activity-form {
+    width: 100%;
+  }
+
+  .activity-form input,
+  .activity-form textarea {
+    width: 100%;
+  }
+
+  .activity-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-form {
+    padding: 20px 16px;
+  }
+}

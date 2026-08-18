@@ -34,3 +34,40 @@ nav a {
 nav a:hover {
   color: #2563eb;
 }
+
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav h2 {
+    font-size: 22px;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 14px 16px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  nav li {
+    font-size: 13px;
+  }
+}

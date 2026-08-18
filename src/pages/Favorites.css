@@ -63,3 +63,28 @@
   margin: 0;
   color: #6b7280;
 }
+
+@media (max-width: 768px) {
+  .favorites-page {
+    padding: 30px 20px;
+  }
+
+  .favorites-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-page {
+    padding: 24px 16px;
+  }
+
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-header {
+    text-align: center;
+  }
+}

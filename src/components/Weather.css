@@ -149,3 +149,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+@media (max-width: 768px) {
+  .weather-section {
+    padding: 24px 20px;
+  }
+
+  .weather-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-section {
+    padding: 20px 16px;
+  }
+
+  .weather-section h2 {
+    font-size: 22px;
+  }
+}
