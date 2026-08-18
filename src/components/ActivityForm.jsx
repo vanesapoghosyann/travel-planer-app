@@ -1,30 +1,47 @@
+import { useState } from "react";
+
+import "./ActivityForm.css";
+
 function ActivityForm({ onAddActivity, startDate, endDate }) {
+
+  const [formError, setFormError] = useState("");
   const handleSubmit = (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+  const formData = new FormData(event.currentTarget);
 
-    const activity = {
-      id: Date.now(),
-      date: formData.get("date"),
-      time: formData.get("time"),
-      title: formData.get("title"),
-      location: formData.get("location"),
-      notes: formData.get("notes"),
-    };
-
-    if (!activity.date || !activity.time || !activity.title) {
-      return;
-    }
-
-    onAddActivity(activity);
-
-    event.currentTarget.reset();
+  const activity = {
+    id: Date.now(),
+    date: formData.get("date"),
+    time: formData.get("time"),
+    title: formData.get("title"),
+    location: formData.get("location"),
+    notes: formData.get("notes"),
   };
+
+  if (!activity.date || !activity.time || !activity.title) {
+    setFormError(
+      "Please select a date, time, and activity name."
+    );
+    return;
+  }
+
+  setFormError("");
+
+  onAddActivity(activity);
+
+  event.currentTarget.reset();
+};
 
   return (
     <form className="activity-form" onSubmit={handleSubmit}>
       <h3>Add Activity</h3>
+
+      {formError && (
+  <p className="form-error">
+    {formError}
+  </p>
+)}
 
       <label>
         Date

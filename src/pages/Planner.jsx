@@ -22,8 +22,9 @@ function Planner() {
   const [currency, setCurrency] = useState("EUR");
   const [tripType, setTripType] = useState("Leisure");
   const [notes, setNotes] = useState("");
+  const [formError, setFormError] = useState("");
 
-  
+
   useEffect(() => {
     localStorage.setItem("travelPlannerTrips", JSON.stringify(trips));
   }, [trips]);
@@ -31,13 +32,41 @@ function Planner() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!tripName || !destination || !startDate || !endDate) {
+    if (!tripName.trim()) {
+      setFormError("Please enter a trip name.");
       return;
     }
 
+    if (!destination) {
+      setFormError("Please choose a destination.");
+      return;
+    }
+
+    if (!startDate || !endDate) {
+      setFormError("Please select both start and end dates.");
+      return;
+    }
+
+    if (endDate < startDate) {
+      setFormError("End date cannot be before the start date.");
+      return;
+    }
+
+    if (Number(travelers) < 1) {
+      setFormError("There must be at least one traveler.");
+      return;
+    }
+
+    if (budget && Number(budget) < 0) {
+      setFormError("Budget cannot be negative.");
+      return;
+    }
+
+    setFormError("");
+
     const newTrip = {
       id: Date.now(),
-      name: tripName,
+      name: tripName.trim(),
       destination,
       startDate,
       endDate,
@@ -45,7 +74,7 @@ function Planner() {
       budget: Number(budget),
       currency,
       tripType,
-      notes,
+      notes: notes.trim(),
     };
 
     setTrips((currentTrips) => [...currentTrips, newTrip]);
@@ -54,7 +83,6 @@ function Planner() {
     setDestination("");
     setStartDate("");
     setEndDate("");
-
     setTravelers(1);
     setBudget("");
     setCurrency("EUR");
@@ -79,6 +107,11 @@ function Planner() {
         <h2>Create a Trip</h2>
 
         <form onSubmit={handleSubmit} className="trip-form">
+          {formError && (
+            <p className="form-error">
+              {formError}
+            </p>
+          )}
           <input
             type="text"
             placeholder="Trip name"
@@ -197,9 +230,13 @@ function Planner() {
             ))}
           </div>
         ) : (
-          <p className="empty-trips">
-            You haven't planned any trips yet.
-          </p>
+          <div className="empty-trips">
+  <h2>No trips planned yet</h2>
+
+  <p>
+    Create your first trip using the form above.
+  </p>
+</div>
         )}
       </section>
     </main>

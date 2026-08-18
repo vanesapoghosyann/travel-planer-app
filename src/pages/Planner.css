@@ -178,3 +178,34 @@
   border-top: 1px solid #e5e7eb;
   line-height: 1.5;
 }
+
+.form-error {
+  margin: 0;
+  padding: 12px 16px;
+
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.empty-trips {
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.empty-trips h2 {
+  margin-bottom: 10px;
+}
+
+.empty-trips p {
+  margin: 0;
+  color: #6b7280;
+}

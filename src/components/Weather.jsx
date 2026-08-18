@@ -77,26 +77,25 @@ function Weather({ destination }) {
   }, [destination]);
 
   if (loading) {
-    return (
-      <section className="weather-section">
-        <h2>Weather</h2>
-        <p className="weather-loading">
-          Loading weather...
-        </p>
-      </section>
-    );
-  }
+  return (
+    <section className="weather-section weather-loading">
+      <h2>Weather</h2>
+      <p>Checking the latest weather conditions...</p>
+    </section>
+  );
+}
 
   if (error) {
-    return (
-      <section className="weather-section">
-        <h2>Weather</h2>
-        <p className="weather-error">
-          {error}
-        </p>
-      </section>
-    );
-  }
+  return (
+    <section className="weather-section weather-error">
+      <h2>Weather</h2>
+      <p>
+        We couldn't load the weather right now.
+        Please try again later.
+      </p>
+    </section>
+  );
+}
 
   return (
     <section className="weather-section">

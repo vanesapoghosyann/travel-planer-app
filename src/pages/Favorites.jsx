@@ -48,9 +48,13 @@ function Favorites() {
           ))}
         </section>
       ) : (
-        <p className="empty-favorites">
-          You haven't saved any destinations yet.
-        </p>
+        <div className="empty-favorites">
+  <h2>No favorites yet</h2>
+
+  <p>
+    Save destinations you love and they'll appear here.
+  </p>
+</div>
       )}
     </main>
   );
