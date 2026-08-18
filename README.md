@@ -1,16 +1,97 @@
-# React + Vite
+# ✈️ Travel Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React web application for discovering destinations, planning trips, organizing itineraries, checking weather, and visualizing trip locations on an interactive map.
 
-Currently, two official plugins are available:
+## 🌍 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live application:** Coming soon
 
-## React Compiler
+**GitHub repository:** [(https://github.com/vanesapoghosyann/react-task-manager)]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🗺️ **Destination discovery** — search and filter destinations by name, country, and region
+* ❤️ **Favorites** — save and manage favorite destinations with localStorage
+* 🧳 **Trip planning** — create trips with dates, travelers, budget, currency, trip type, and notes
+* 📅 **Itineraries** — add activities with dates, times, locations, and notes
+* 🌤️ **Weather** — view current weather and forecasts for trip destinations
+* 🗺️ **Interactive maps** — visualize destinations and itinerary locations with Leaflet
+* 📱 **Responsive design** — optimized for desktop, tablet, and mobile
+* ⚠️ **UX states** — form validation, loading states, error messages, and empty states
+
+---
+
+## 🛠️ Technologies
+
+* React
+* Vite
+* React Router
+* JavaScript (ES6+)
+* CSS3
+* Leaflet & React Leaflet
+* OpenStreetMap
+* Open-Meteo API
+* Nominatim
+* LocalStorage
+* Git & GitHub
+* Vercel
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/vanesapoghosyann/react-task-manager.git
+cd react-task-manager
+npm install
+npm run dev
+```
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+---
+
+## 💾 Data Persistence
+
+The application uses browser `localStorage` to persist:
+
+* Favorite destinations
+* Planned trips
+* Trip activities
+
+No account or authentication is required.
+
+---
+
+## 🎯 Project Highlights
+
+This project demonstrates:
+
+* Component-based React architecture
+* React Hooks and state management
+* Client-side routing
+* API integration
+* Asynchronous data fetching
+* Interactive maps and geocoding
+* Form handling and validation
+* Responsive UI development
+* Loading and error state management
+
+---
+
+## 👩‍💻 Author
+
+**Vanesa Poghosyan**
+
+Interested in combining technology, project management, and product-oriented thinking.
+
+* [GitHub](https://github.com/vanesapoghosyann)
+* [LinkedIn](http://linkedin.com/in/vanesa-poghosyan-a818903a4)
