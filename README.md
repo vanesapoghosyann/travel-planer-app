@@ -2,9 +2,7 @@
 
 A responsive React web application for discovering destinations, planning trips, organizing itineraries, checking weather, and visualizing trip locations on an interactive map.
 
-## 🌍 Live Demo
-
-**Live application:** Coming soon
+## 🌍 Live Demo [(travel-planer-app-two.vercel.app)]
 
 **GitHub repository:** [(https://github.com/vanesapoghosyann/travel-planer-app)]
 
